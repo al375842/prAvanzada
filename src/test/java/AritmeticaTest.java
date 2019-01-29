@@ -19,8 +19,10 @@ public class AritmeticaTest {
 
     @Test
     public void multiplicaciónTest() {
-
+        Aritmetica aritmetica = new Aritmetica();
+        assertEquals(6,aritmetica.multiplicacion(2,3),0);
     }
+
     @Test
     public void divisiónTest() {
 
