@@ -25,6 +25,7 @@ public class AritmeticaTest {
 
     @Test
     public void divisiónTest() {
-
+        Aritmetica aritmetica = new Aritmetica();
+        assertEquals(5, aritmetica.division(10,2),0);
     }
 }
