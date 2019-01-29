@@ -1,8 +1,9 @@
 import aritmetica.Aritmetica;
+import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 public class AritmeticaTest {
     private Aritmetica aritmetica;
@@ -11,6 +12,11 @@ public class AritmeticaTest {
     public void inicio() {
         System.out.println("Método inicial");
         aritmetica = new Aritmetica();
+    }
+
+    @After  //para destruir lo que hay antes
+    public void finish() {
+        aritmetica = null;
     }
 
     @Test
