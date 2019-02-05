@@ -4,10 +4,12 @@ import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.fail;
 
 public class AritmeticaTest {
     private Aritmetica aritmetica;
 
+    //BeforeClass > Before > After > AfterClass
     @Before  //antes de cualquier test
     public void inicio() {
         System.out.println("Método inicial");
@@ -43,4 +45,15 @@ public class AritmeticaTest {
         System.out.println("Método divisiónTest");
         assertEquals(5, aritmetica.division(10,2),0);
     }
+
+    @Test(expected = ArithmeticException.class)
+    public void divisionPorCero() {
+        try {
+            System.out.println(1 / 0);
+            fail("Aquí no debe llegar");
+        } catch (ArithmeticException e){
+
+        }
+    }
+
 }

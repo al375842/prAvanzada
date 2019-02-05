@@ -19,7 +19,7 @@ public class Aritmetica {
         return ultimoResultado = dividendo / divisor;
     }
 
-    public float getUltimaRessultado() {
+    public float getUltimaResultado() {
         return ultimoResultado;
     }
 }
